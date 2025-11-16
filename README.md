@@ -1,1 +1,3 @@
-# versecond-website
+# Versecond Website
+
+Сайт для селективного секонд-хенда из Ярославля

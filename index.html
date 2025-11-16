@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versecond - Селективный секонд-хенд из Ярославля</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>Versecond</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#catalog" class="nav-link">Каталог</a></li>
+                <li><a href="#delivery" class="nav-link">Доставка</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Селективная одежда секонд-хенд из Ярославля!</h1>
+                    <p>Стильная одежда по доступным ценам. Находим уникальные вещи для вашего гардероба.</p>
+                    <button class="cta-button" onclick="showPage('catalog')">Смотреть каталог</button>
+                </div>
+            </div>
+            
+            <div class="about-section">
+                <div class="container">
+                    <h2>Почему выбирают нас?</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>👕 Одежда на любой сезон</h3>
+                            <p>Широкий ассортимент мужской и женской одежды. От шуб до джинсов клеш.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🌟 Качество</h3>
+                            <p>Тщательный отбор, только качественные вещи</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🚚 Быстрая доставка</h3>
+                            <p>Отправка в день заказа по всей России</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="page">
+            <div class="container">
+                <h2>Каталог вещей</h2>
+                <div class="catalog-filters">
+                    <button class="filter-btn active" data-category="all">Все</button>
+                    <button class="filter-btn" data-category="clothes">Одежда</button>
+                    <button class="filter-btn" data-category="shoes">Обувь</button>
+                    <button class="filter-btn" data-category="accessories">Аксессуары</button>
+                </div>
+                <div class="catalog-grid" id="catalogGrid">
+                    <!-- Товары будут добавляться через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="delivery" class="page">
+            <div class="container">
+                <h2>Доставка и оплата</h2>
+                <div class="delivery-info">
+                    <div class="info-card">
+                        <h3>🚚 Способы доставки</h3>
+                        <ul>
+                            <li><strong>Почта России</strong> - 300-500 руб (5-14 дней)</li>
+                            <li><strong>СДЭК</strong> - 400-600 руб (3-7 дней)</li>
+                            <li><strong>Курьером</strong> - 500 руб (в пределах города)</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>💳 Способы оплаты</h3>
+                        <ul>
+                            <li>Наличными при получении</li>
+                            <li>Банковской картой онлайн</li>
+                            <li>Перевод на карту Сбербанка</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>📦 Возврат</h3>
+                        <p>Возврат в течение 14 дней при сохранении бирок и товарного вида</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="page">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="contacts-content">
+                    <div class="contact-info">
+                        <h3>📞 Свяжитесь с нами</h3>
+                        <p><strong>Instagram:</strong> @versecond</p>
+                        <p><strong>Telegram:</strong> @versecond</p>
+                        
+                        <div class="social-links">
+                            <a href="https://instagram.com/versecond" class="social-link">Instagram</a>
+                            <a href="https://t.me/versecond" class="social-link">Telegram</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>📨 Форма обратной связи</h3>
+                        <form id="feedbackForm">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="email" placeholder="Ваш email" required>
+                            <input type="tel" placeholder="Ваш телефон">
+                            <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                            <button type="submit">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Контент модального окна -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Versecond. Селективная одежда секонд-хенд из Ярославля.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

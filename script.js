@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Настраиваем форму обратной связи
     setupForm();
     
+    // Настраиваем особенную кнопку
+    setupSpecialButton();
+    
     // Обработка кликов по навигации
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function(e) {
@@ -189,6 +192,27 @@ function setupForm() {
         e.preventDefault();
         alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
         this.reset();
+    });
+}
+
+// Функция для особенной кнопки
+function setupSpecialButton() {
+    const specialButton = document.getElementById('specialButton');
+    const specialModal = document.getElementById('specialModal');
+    const closeSpecial = document.querySelector('.close-special');
+    
+    specialButton.addEventListener('click', function() {
+        specialModal.style.display = 'block';
+    });
+    
+    closeSpecial.addEventListener('click', function() {
+        specialModal.style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === specialModal) {
+            specialModal.style.display = 'none';
+        }
     });
 }
 

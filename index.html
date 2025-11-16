@@ -118,17 +118,37 @@
                             <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
                             <button type="submit">Отправить сообщение</button>
                         </form>
+
+                        <!-- Особенная кнопка -->
+                        <div class="special-button-container">
+                            <button id="specialButton" class="special-btn">Особенное сообщение 💖</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Модальное окно товара -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div id="modalContent">
                 <!-- Контент модального окна -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для особенного сообщения -->
+    <div id="specialModal" class="modal">
+        <div class="modal-content">
+            <span class="close-special">&times;</span>
+            <div class="special-message">
+                <h2>Каролиша самая красивая девочка на свете! 💕</h2>
+                <div id="specialPhoto" class="special-photo">
+                    <!-- Фото будет загружено позже -->
+                    <p>Здесь будет ваше фото</p>
+                </div>
             </div>
         </div>
     </div>

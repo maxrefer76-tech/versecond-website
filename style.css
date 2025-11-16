@@ -365,7 +365,9 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem 0;
-    margin-top: 4rem;
+    margin-top: auto; /* Это исправит позиционирование */
+    position: relative;
+    width: 100%;
 }
 
 /* Адаптивность */
@@ -394,4 +396,70 @@ footer {
     .features {
         grid-template-columns: 1fr;
     }
+    /* Исправление для мобильных устройств */
+@media (max-width: 768px) {
+    footer {
+        position: relative;
+        margin-top: 2rem;
+    }
+}
+/* Стили для особенной кнопки */
+.special-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.special-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.special-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Стили для особенного модального окна */
+.special-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.special-message h2 {
+    color: #e74c3c;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.special-photo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed #e74c3c;
+}
+
+.close-special {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-special:hover {
+    color: #000;
+}
 }
